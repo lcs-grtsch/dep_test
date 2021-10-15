@@ -7,3 +7,9 @@ before_install:
 
 script:
   - docker run lcs-grtsch/dep_test
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
